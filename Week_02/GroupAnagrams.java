@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 
+
 public class GroupAnagrams {
     public List<List<String>> groupAnagrams01(String[] strs) {
         HashMap<String, List<String>> hash = new HashMap<>();
