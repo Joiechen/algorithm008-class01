@@ -15,6 +15,7 @@
      */
     static final float DEFAULT_LOAD_FACTOR = 0.75f;
 ```
+
 5. put方法源码解析：
 ```
 public V put(K key, V value) {
@@ -74,14 +75,15 @@ public V put(K key, V value) {
 53     return null;
 54 }
 ```
-5.1 判断键值对数组table[i]是否为空或为null，否则执行resize()进行扩容；
-5.2 根据键值key计算hash值得到插入的数组索引i，如果table[i]==null，直接新建节点添加，转向⑥，如果table[i]不为空，转向③；
-5.3 判断table[i]的首个元素是否和key一样，如果相同直接覆盖value，否则转向④，这里的相同指的是hashCode以及equals；
-5.4 判断table[i] 是否为treeNode，即table[i] 是否是红黑树，如果是红黑树，则直接在树中插入键值对，否则转向⑤；
-5.5 遍历table[i]，判断链表长度是否大于8，大于8的话把链表转换为红黑树，在红黑树中执行插入操作，否则进行链表的插入操作；遍历过程中若发现key已经存在直接覆盖value即可；
-5.6 插入成功后，判断实际存在的键值对数量size是否超多了最大容量threshold，如果超过，进行扩容。
-6. HashMap中的Fail-Fast机制：
-6.1 因为HashMap不是线程安全的，当时用迭代器的过程中有其他的线程改变了HashMap中的值将会抛出ConcurrentModificationException 。
+
+5.1  判断键值对数组table[i]是否为空或为null，否则执行resize()进行扩容；
+5.2  根据键值key计算hash值得到插入的数组索引i，如果table[i]==null，直接新建节点添加，转向⑥，如果table[i]不为空，转向③；
+5.3  判断table[i]的首个元素是否和key一样，如果相同直接覆盖value，否则转向④，这里的相同指的是hashCode以及equals；
+5.4  判断table[i] 是否为treeNode，即table[i] 是否是红黑树，如果是红黑树，则直接在树中插入键值对，否则转向⑤；
+5.5  遍历table[i]，判断链表长度是否大于8，大于8的话把链表转换为红黑树，在红黑树中执行插入操作，否则进行链表的插入操作；遍历过程中若发现key已经存在直接覆盖value即可；
+5.6  插入成功后，判断实际存在的键值对数量size是否超多了最大容量threshold，如果超过，进行扩容。
+6.  HashMap中的Fail-Fast机制：
+6.1  因为HashMap不是线程安全的，当时用迭代器的过程中有其他的线程改变了HashMap中的值将会抛出ConcurrentModificationException 。
 例如，当我使用线程A去遍历HashMap时，线程B修改了HashMap的值就会抛出ConcurrentModificationException。
-6.2 Fail-fast 机制是 java 集合(Collection)中的一种错误机制。 当多个线程对同一个集合的内容进行操作时，就可能会产生 fail-fast 事件。
-6.3 HashMap中有个属性modCount就是记录修改的次数，每次修改都会使modCount++。
+6.2  Fail-fast 机制是 java 集合(Collection)中的一种错误机制。 当多个线程对同一个集合的内容进行操作时，就可能会产生 fail-fast 事件。
+6.3  HashMap中有个属性modCount就是记录修改的次数，每次修改都会使modCount++。
