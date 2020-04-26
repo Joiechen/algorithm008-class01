@@ -2,6 +2,7 @@ package Week_01.LRUCache;
 
 import java.util.HashMap;
 
+//题目 面试题 16.25. LRU缓存 https://leetcode-cn.com/problems/lru-cache-lcci/
 public class LRUCache {
     // key -> Node(key, val)
     private HashMap<Integer, Node> map;

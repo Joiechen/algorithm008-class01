@@ -1,5 +1,7 @@
 package Week_01;
 
+
+//题目 26. 删除排序数组中的重复项 https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/
 public class removeduplicated {
 
     //双指针方式

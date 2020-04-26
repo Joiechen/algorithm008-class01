@@ -8,6 +8,7 @@ import java.util.PriorityQueue;
 import java.util.Set;
 
 //twitter类 ，时间戳 还有User类的定义
+//题目 https://leetcode-cn.com/problems/design-twitter/
 class Twitter {
     
     private static int timestamp = 0;
