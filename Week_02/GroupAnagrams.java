@@ -6,7 +6,9 @@ import java.util.HashMap;
 import java.util.List;
 
 
+//题目 字母异位词中等难度： https://leetcode-cn.com/problems/group-anagrams/
 public class GroupAnagrams {
+
     public List<List<String>> groupAnagrams01(String[] strs) {
         HashMap<String, List<String>> hash = new HashMap<>();
         for (int i = 0; i < strs.length; i++) {

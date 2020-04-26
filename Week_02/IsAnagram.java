@@ -3,6 +3,7 @@ package Week_02;
 import java.util.HashMap;
 import java.util.Map;
 
+//题目 242. 有效的字母异位词 ：https://leetcode-cn.com/problems/valid-anagram/
 public class IsAnagram {
 
     //HashMap用起来

@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+//题目 1200. 最小绝对差 https://leetcode-cn.com/problems/minimum-absolute-difference/
 public class MinimumAbsDifference {
     
     //使用asList方法

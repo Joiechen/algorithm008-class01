@@ -2,6 +2,7 @@ package Week_02;
 
 import java.util.Stack;
 
+//题目 1021. 删除最外层的括号： https://leetcode-cn.com/problems/remove-outermost-parentheses/
 public class RemoveOuterParentheses {
 
     //Stack解法
