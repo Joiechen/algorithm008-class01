@@ -4,7 +4,7 @@
    
 ### 深度优先搜索的步骤为（使用二叉树实现）：
 
-![Image text](https://github.com/Joiechen/algorithm008-class01/blob/master/Week_04/jpg/%E4%BA%8C%E5%8F%89%E6%A0%91.png)
+![这里是二叉树图片](https://github.com/Joiechen/algorithm008-class01/blob/master/Week_04/jpg/二叉树.png)
 
 （1）首先节点 1 进栈，节点1在栈顶；
 
